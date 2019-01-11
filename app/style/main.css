@@ -1,0 +1,81 @@
+/* theme */
+/******************************************************************************/
+:root {
+  --black: #363643;
+  --blackLight: #3f4058;
+  --gray: #8586a4;
+  --white: #ededed;
+  --indigo: #5d6ed0;
+
+  --fontNormal: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--fontNormal);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* default components (no class) */
+/******************************************************************************/
+p:not([class]) {
+  margin-bottom: 1.5rem;
+}
+
+a:link:not([class]),
+a:visited:not([class]) {
+  text-decoration: underline;
+}
+a:hover:not([class]),
+a:focus:not([class]),
+a:active:not([class]) {
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+/* layout components */
+/******************************************************************************/
+.layout {
+  min-height: 100vh;
+  max-width: 57rem;
+  display: grid;
+  grid-template:
+    "main" 1fr
+    "footer" 3rem;
+  grid-gap: 2rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 2.5rem 1fr;
+  grid-gap: 2rem;
+}
+.main_controls{
+  display: grid;
+  grid-auto-flow: column;
+  place-content: start;
+  grid-gap: 2rem;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  place-content: center;
+  border-top: 1px solid var(--white);
+}
+.footer_inner {
+  font-size: 0.75rem;
+}
+.footer_inner > * {
+  display: inline;
+}
+
+/* regular components */
+/******************************************************************************/
+.component_sub.-modifier {
+}
