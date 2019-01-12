@@ -39,7 +39,7 @@ a:active:not([class]) {
 /******************************************************************************/
 .layout {
   min-height: 100vh;
-  max-width: 57rem;
+  max-width: 70rem;
   display: grid;
   grid-template:
     "main" 1fr
@@ -55,18 +55,11 @@ a:active:not([class]) {
   grid-template-rows: 2.5rem 1fr;
   grid-gap: 2rem;
 }
-.main_controls{
-  display: grid;
-  grid-auto-flow: column;
-  place-content: start;
-  grid-gap: 2rem;
-}
 
 .footer {
   grid-area: footer;
   display: grid;
   place-content: center;
-  border-top: 1px solid var(--white);
 }
 .footer_inner {
   font-size: 0.75rem;
@@ -77,5 +70,56 @@ a:active:not([class]) {
 
 /* regular components */
 /******************************************************************************/
-.component_sub.-modifier {
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: start;
+  grid-gap: 2rem;
+}
+
+/* span workaround: display grid doesn't work directly on button in chrome (bug) */
+.button {
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: var(--indigo);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.input{
+  display: grid;
+  align-content: center;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  height: 2.5rem;
+  width: 8.5rem;
+  padding: 0 1rem;
+  border-bottom: 2px solid var(--gray);
+  background-color: var(--blackLight);
+  color: var(--white);
+  font-weight: 500;
+}
+.input:focus-within{
+  border-bottom-color: var(--indigo);
+}
+.input_label{
+  opacity: 0.6;
+}
+
+
+.textarea{
+  height: 100%;
+  padding: 2rem;
+  border-bottom: 2px solid var(--gray);
+  background-color: var(--blackLight);
+  color: var(--white);
+  resize: none;
+}
+.textarea:focus-within{
+  border-bottom-color: var(--indigo);
 }

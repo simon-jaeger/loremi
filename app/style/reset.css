@@ -42,6 +42,14 @@ table {
   border-collapse: collapse;
 }
 
+label,
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+}
+
 textarea {
   overflow: auto;
   resize: vertical;
