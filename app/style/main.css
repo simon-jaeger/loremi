@@ -6,6 +6,7 @@
   --gray: #8586a4;
   --white: #ededed;
   --indigo: #5d6ed0;
+  --indigoDark: #4b58a7;
 
   --fontNormal: "Roboto", sans-serif;
 }
@@ -77,6 +78,10 @@ a:active:not([class]) {
   grid-gap: 2rem;
 }
 
+.output{
+  display: grid;
+}
+
 /* span workaround: display grid doesn't work directly on button in chrome (bug) */
 .button {
   display: grid;
@@ -88,6 +93,10 @@ a:active:not([class]) {
   background-color: var(--indigo);
   color: var(--white);
   font-weight: 500;
+  white-space: nowrap;
+}
+.button:hover,.button:active,.button:focus{
+  background-color: var(--indigoDark);
 }
 
 .input{
@@ -113,7 +122,6 @@ a:active:not([class]) {
 
 
 .textarea{
-  height: 100%;
   padding: 2rem;
   border-bottom: 2px solid var(--gray);
   background-color: var(--blackLight);
