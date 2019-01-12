@@ -1,9 +1,7 @@
 /* reset */
 /*******************************************************************************
-
 - removes default styling (padding, list-style, font-size, borders, ...)
 - sets sane defaults (border-box, border-collapse, ...)
-
 *******************************************************************************/
 :root {
   font-family: sans-serif;
@@ -40,14 +38,6 @@ ul {
 
 table {
   border-collapse: collapse;
-}
-
-label,
-input,
-textarea,
-button {
-  display: block;
-  width: 100%;
 }
 
 textarea {
