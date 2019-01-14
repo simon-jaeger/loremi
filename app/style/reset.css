@@ -7,7 +7,6 @@
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1;
-  word-break: break-word;
 }
 
 *,
@@ -72,7 +71,8 @@ button,
 
 /* cross browser fixes */
 /******************************************************************************/
-main, dialog {
+main,
+dialog {
   display: block;
 }
 
