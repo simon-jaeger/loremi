@@ -111,6 +111,15 @@ a:active:not([class]) {
 .button:focus > span {
   background-color: var(--indigoDark);
 }
+.button .button_tick{
+  display: none;
+}
+.button.-success .button_tick{
+  display: block;
+}
+.button.-success .button_clipboard{
+  display: none;
+}
 
 .input {
   display: flex;
@@ -132,6 +141,11 @@ a:active:not([class]) {
 .input_label {
   padding-left: 1rem;
   opacity: 0.6;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .textarea {
