@@ -35,12 +35,12 @@
             </span>
           </button>
           <div class="input">
-            <input class="input_field" id="words" type="number" value="100"/>
+            <input class="input_field" id="words" oninput="updateText()" type="number" value="59" min="1" max="800" required/>
             <label class="input_label" for="words">words</label>
           </div>
         </section>
         <section class="output">
-          <textarea class="textarea" id="text">Lorem ipsum</textarea>
+          <textarea class="textarea" id="text" spellcheck="false">Lorem ipsum</textarea>
         </section>
       </main>
 
