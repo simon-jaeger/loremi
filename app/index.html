@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#363643" />
+    <link rel="icon" type="image/png" sizes="32x32" href="meta/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="script/main.js" defer></script>
+
+    <title>Loremi</title>
+    <meta name="description" content="A super simple lorem ipsum generator" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <main class="main">
+        <section class="controls">
+          <button class="button" id="button" onclick="copyToClipboard()">
+            <span>
+              <!-- prettier-ignore -->
+              <svg class="button_clipboard" width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.05714 12.8H6.17143V13.8667H2.05714V12.8ZM7.2 6.4H2.05714V7.46667H7.2V6.4ZM9.25714 9.6V7.46667L6.17143 10.6667L9.25714 13.8667V11.7333H14.4V9.6H9.25714ZM4.62857 8.53333H2.05714V9.6H4.62857V8.53333ZM2.05714 11.7333H4.62857V10.6667H2.05714V11.7333ZM11.3143 12.8H12.3429V14.9333C12.3223 15.232 12.2297 15.488 12.0343 15.68C11.8389 15.872 11.6023 15.9787 11.3143 16H1.02857C0.462857 16 0 15.52 0 14.9333V3.2C0 2.61333 0.462857 2.13333 1.02857 2.13333H4.11429C4.11429 0.949333 5.02971 0 6.17143 0C7.31314 0 8.22857 0.949333 8.22857 2.13333H11.3143C11.88 2.13333 12.3429 2.61333 12.3429 3.2V8.53333H11.3143V5.33333H1.02857V14.9333H11.3143V12.8ZM2.05714 4.26667H10.2857C10.2857 3.68 9.82286 3.2 9.25714 3.2H8.22857C7.66286 3.2 7.2 2.72 7.2 2.13333C7.2 1.54667 6.73714 1.06667 6.17143 1.06667C5.60571 1.06667 5.14286 1.54667 5.14286 2.13333C5.14286 2.72 4.68 3.2 4.11429 3.2H3.08571C2.52 3.2 2.05714 3.68 2.05714 4.26667Z"/></svg>
+              <!-- prettier-ignore -->
+              <svg class="button_tick" width="15" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 5L4 13L0 9L1.5 7.5L4 10L10.5 3.5L12 5Z"/></svg>
+              <span>COPY TO CLIPBOARD</span>
+            </span>
+          </button>
+          <div class="input">
+            <input class="input_field" id="words" oninput="updateText()" type="number" value="59" min="1" max="800" required/>
+            <label class="input_label" for="words">words</label>
+          </div>
+        </section>
+        <section class="output">
+          <textarea class="textarea" id="text" spellcheck="false">Lorem ipsum</textarea>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer_inner">
+          <h1>
+            <a href="https://github.com/simon-jaeger/loremi" target="_blank"
+              >Loremi</a
+            >
+          </h1>
+          by
+          <a href="https://simon-jaeger.github.io/" target="_blank"
+            >Simon Jaeger</a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

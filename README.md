@@ -1,2 +1,3 @@
 # loremi
-a super simple lorem ipsum generator
+
+A super simple lorem ipsum generator

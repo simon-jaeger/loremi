@@ -1,0 +1,166 @@
+/* theme */
+/******************************************************************************/
+:root {
+  --black: #363643;
+  --blackLight: #3f4058;
+  --gray: #8586a4;
+  --white: #ededed;
+  --indigo: #5d6ed0;
+  --indigoDark: #4b58a7;
+
+  --fontNormal: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--fontNormal);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* default components (no class) */
+/******************************************************************************/
+p:not([class]) {
+  margin-bottom: 1.5rem;
+}
+
+a:link:not([class]),
+a:visited:not([class]) {
+  text-decoration: underline;
+}
+a:hover:not([class]),
+a:focus:not([class]),
+a:active:not([class]) {
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+/* layout components */
+/******************************************************************************/
+.layout {
+  min-height: 100vh;
+  max-width: 70rem;
+  display: grid;
+  grid-template:
+    "main" 1fr
+    "footer" 3rem;
+  grid-gap: 2rem;
+  padding: 3rem;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .layout{
+    padding: 2rem;
+  }
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 2rem;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  place-content: center;
+}
+.footer_inner {
+  font-size: 0.75rem;
+}
+.footer_inner > * {
+  display: inline;
+}
+
+/* regular components */
+/******************************************************************************/
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: 2rem;
+}
+@media (max-width: 600px) {
+  .controls{
+    grid-auto-flow: row;
+    justify-content: stretch;
+  }
+}
+
+.output {
+  display: grid;
+}
+
+/* span workaround: display grid doesn't work directly on button in chrome (bug) */
+.button > span {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: var(--indigo);
+  color: var(--white);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.button:hover > span,
+.button:active > span,
+.button:focus > span {
+  background-color: var(--indigoDark);
+}
+.button .button_tick{
+  display: none;
+}
+.button.-success .button_tick{
+  display: block;
+}
+.button.-success .button_clipboard{
+  display: none;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-bottom: 2px solid var(--gray);
+  background-color: var(--blackLight);
+  color: var(--white);
+  font-weight: 500;
+}
+.input:focus-within {
+  border-bottom-color: var(--indigo);
+}
+.input_field {
+  width: 4rem;
+  flex: 1;
+}
+.input_label {
+  padding-left: 1rem;
+  opacity: 0.6;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textarea {
+  padding: 2rem;
+  border-bottom: 2px solid var(--gray);
+  background-color: var(--blackLight);
+  color: var(--white);
+  resize: none;
+}
+.textarea:focus-within {
+  border-bottom-color: var(--indigo);
+}
+@media (max-width: 600px) {
+  .textarea{
+    padding: 1rem;
+  }
+}
